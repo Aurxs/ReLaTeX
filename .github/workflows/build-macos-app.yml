@@ -42,7 +42,7 @@ jobs:
       - name: Show Xcode version
         run: xcodebuild -version
 
-      - name: Build unsigned macOS app
+      - name: Build ad-hoc signed macOS app
         run: |
           xcodebuild \
             -project ReLaTeX/ReLaTeX.xcodeproj \
@@ -50,23 +50,16 @@ jobs:
             -configuration "${{ inputs.configuration }}" \
             -destination 'generic/platform=macOS' \
             -derivedDataPath build/DerivedData \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_ALLOWED=YES \
+            CODE_SIGNING_REQUIRED=YES \
+            CODE_SIGN_IDENTITY=- \
             MACOSX_DEPLOYMENT_TARGET=10.14 \
             build
-
-      - name: Package app
-        run: |
-          mkdir -p build/artifacts
-          ditto -c -k --keepParent \
-            "build/DerivedData/Build/Products/${{ inputs.configuration }}/ReLaTeX.app" \
-            "build/artifacts/ReLaTeX-macOS-${{ inputs.configuration }}.zip"
 
       - name: Upload app artifact
         uses: actions/upload-artifact@v4
         with:
           name: ReLaTeX-macOS-${{ inputs.configuration }}
-          path: build/artifacts/ReLaTeX-macOS-${{ inputs.configuration }}.zip
+          path: build/DerivedData/Build/Products/${{ inputs.configuration }}/ReLaTeX.app
           if-no-files-found: error
           retention-days: 14

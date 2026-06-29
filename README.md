@@ -45,10 +45,10 @@ Download a prebuilt app from GitHub Actions:
 1. Open the repository's **Actions** tab.
 2. Run **Build macOS App** manually, or open the latest successful run.
 3. Download the `ReLaTeX-macOS-Release` artifact.
-4. Unzip the downloaded artifact, then unzip `ReLaTeX-macOS-Release.zip`.
+4. Unzip the downloaded artifact.
 5. Open `ReLaTeX.app`.
 
-The Actions artifact is unsigned. If macOS blocks the downloaded app, remove the quarantine flag after unzipping `ReLaTeX.app`:
+The Actions artifact is ad-hoc signed, but it is not Developer ID signed or notarized. If macOS blocks the downloaded app, remove the quarantine flag after unzipping `ReLaTeX.app`:
 
 ```sh
 xattr -dr com.apple.quarantine ReLaTeX.app
@@ -61,11 +61,12 @@ In Safari:
 3. Enable `ReLaTeX for ChatGPT`.
 4. Refresh your ChatGPT page.
 
-Because the app is not Developer ID signed yet, Safari may still require unsigned extensions to be enabled:
+Because the app is not Developer ID signed yet, Safari still requires unsigned extensions to be enabled:
 
 1. Safari Settings -> Advanced -> Show features for web developers.
 2. Safari menu bar -> Develop -> Allow Unsigned Extensions.
-3. Open `ReLaTeX.app` again.
+3. Quit and reopen Safari if the menu item was not enabled before.
+4. Open `ReLaTeX.app` from Applications again.
 
 Build from source for local development:
 

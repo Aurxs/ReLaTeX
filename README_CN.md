@@ -45,10 +45,10 @@ ReLaTeX 是一个 macOS Safari Web Extension，用来解决 ChatGPT 页面里 La
 1. 打开仓库的 **Actions** 页面。
 2. 手动运行 **Build macOS App**，或打开最近一次成功运行。
 3. 下载 `ReLaTeX-macOS-Release` artifact。
-4. 先解压下载下来的 artifact，再解压里面的 `ReLaTeX-macOS-Release.zip`。
+4. 解压下载下来的 artifact。
 5. 打开 `ReLaTeX.app`。
 
-Actions 产物目前没有签名。如果 macOS 阻止打开，解压出 `ReLaTeX.app` 后执行：
+Actions 产物会做 ad-hoc 签名，但还没有 Developer ID 签名和 notarization。如果 macOS 阻止打开，解压出 `ReLaTeX.app` 后执行：
 
 ```sh
 xattr -dr com.apple.quarantine ReLaTeX.app
@@ -61,11 +61,12 @@ xattr -dr com.apple.quarantine ReLaTeX.app
 3. 启用 `ReLaTeX for ChatGPT`。
 4. 刷新 ChatGPT 页面。
 
-因为这个 app 还没有 Developer ID 签名，Safari 可能仍然需要允许未签名扩展：
+因为这个 app 还没有 Developer ID 签名，Safari 仍然需要允许未签名扩展：
 
 1. Safari 设置 -> 高级 -> 显示 Web 开发者功能。
 2. Safari 菜单栏 -> 开发 -> 允许未签名扩展。
-3. 再次打开 `ReLaTeX.app`。
+3. 如果之前没有打开这个菜单项，退出并重新打开 Safari。
+4. 从 Applications 再次打开 `ReLaTeX.app`。
 
 本地开发时仍然可以从源码构建：
 
