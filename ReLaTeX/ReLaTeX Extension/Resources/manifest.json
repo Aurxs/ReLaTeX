@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "ReLaTeX for ChatGPT",
+  "version": "0.1.0",
+  "description": "Render raw LaTeX formulas on ChatGPT pages in Safari.",
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg",
+    "128": "icons/icon.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ],
+      "css": [
+        "vendor/katex/katex.min.css",
+        "content.css"
+      ],
+      "js": [
+        "vendor/katex/katex.min.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "vendor/katex/fonts/*"
+      ],
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ]
+    }
+  ]
+}

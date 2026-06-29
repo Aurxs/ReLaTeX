@@ -1,0 +1,19 @@
+{
+  "name": "relatex",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Safari Web Extension that renders raw LaTeX on ChatGPT pages.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aurxs/ReLaTeX.git"
+  },
+  "homepage": "https://github.com/Aurxs/ReLaTeX#readme",
+  "scripts": {
+    "vendor:katex": "bash scripts/vendor-katex.sh",
+    "build:safari": "xcrun safari-web-extension-converter extension --project-location . --app-name ReLaTeX --bundle-identifier com.aurxs.ReLaTeX --macos-only --swift --copy-resources --no-open --no-prompt --force && bash scripts/patch-host-app.sh"
+  },
+  "devDependencies": {
+    "katex": "0.17.0"
+  }
+}

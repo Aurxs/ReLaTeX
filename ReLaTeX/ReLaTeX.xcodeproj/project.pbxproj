@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C2110312FF27B9500781F57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2110302FF27B9500781F57 /* AppDelegate.swift */; };
+		6C2110352FF27B9500781F57 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 6C2110332FF27B9500781F57 /* Main.html */; };
+		6C2110372FF27B9500781F57 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C2110362FF27B9500781F57 /* Icon.png */; };
+		6C2110392FF27B9500781F57 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 6C2110382FF27B9500781F57 /* Style.css */; };
+		6C21103B2FF27B9500781F57 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 6C21103A2FF27B9500781F57 /* Script.js */; };
+		6C21103D2FF27B9500781F57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C21103C2FF27B9500781F57 /* ViewController.swift */; };
+		6C2110402FF27B9500781F57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C21103E2FF27B9500781F57 /* Main.storyboard */; };
+		6C2110422FF27B9600781F57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C2110412FF27B9600781F57 /* Assets.xcassets */; };
+		6C2110492FF27B9600781F57 /* ReLaTeX Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6C2110482FF27B9600781F57 /* ReLaTeX Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6C21104E2FF27B9600781F57 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C21104D2FF27B9600781F57 /* SafariWebExtensionHandler.swift */; };
+		6C21105F2FF27B9600781F57 /* content.css in Resources */ = {isa = PBXBuildFile; fileRef = 6C21105A2FF27B9600781F57 /* content.css */; };
+		6C2110602FF27B9600781F57 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 6C21105B2FF27B9600781F57 /* icons */; };
+		6C2110612FF27B9600781F57 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C21105C2FF27B9600781F57 /* manifest.json */; };
+		6C2110622FF27B9600781F57 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 6C21105D2FF27B9600781F57 /* content.js */; };
+		6C2110632FF27B9600781F57 /* vendor in Resources */ = {isa = PBXBuildFile; fileRef = 6C21105E2FF27B9600781F57 /* vendor */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C21104A2FF27B9600781F57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C2110252FF27B9500781F57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C2110472FF27B9600781F57;
+			remoteInfo = "ReLaTeX Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6C2110552FF27B9600781F57 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6C2110492FF27B9600781F57 /* ReLaTeX Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6C21102D2FF27B9500781F57 /* ReLaTeX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReLaTeX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C2110302FF27B9500781F57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C2110342FF27B9500781F57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		6C2110362FF27B9500781F57 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		6C2110382FF27B9500781F57 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		6C21103A2FF27B9500781F57 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		6C21103C2FF27B9500781F57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6C21103F2FF27B9500781F57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C2110412FF27B9600781F57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C2110432FF27B9600781F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C2110482FF27B9600781F57 /* ReLaTeX Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ReLaTeX Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C21104D2FF27B9600781F57 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		6C21104F2FF27B9600781F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C21105A2FF27B9600781F57 /* content.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = content.css; path = Resources/content.css; sourceTree = "<group>"; };
+		6C21105B2FF27B9600781F57 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = Resources/icons; sourceTree = "<group>"; };
+		6C21105C2FF27B9600781F57 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		6C21105D2FF27B9600781F57 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = Resources/content.js; sourceTree = "<group>"; };
+		6C21105E2FF27B9600781F57 /* vendor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = vendor; path = Resources/vendor; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C21102A2FF27B9500781F57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C2110452FF27B9600781F57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C2110242FF27B9500781F57 = {
+			isa = PBXGroup;
+			children = (
+				6C21102F2FF27B9500781F57 /* ReLaTeX */,
+				6C21104C2FF27B9600781F57 /* ReLaTeX Extension */,
+				6C21102E2FF27B9500781F57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C21102E2FF27B9500781F57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C21102D2FF27B9500781F57 /* ReLaTeX.app */,
+				6C2110482FF27B9600781F57 /* ReLaTeX Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C21102F2FF27B9500781F57 /* ReLaTeX */ = {
+			isa = PBXGroup;
+			children = (
+				6C2110302FF27B9500781F57 /* AppDelegate.swift */,
+				6C21103C2FF27B9500781F57 /* ViewController.swift */,
+				6C21103E2FF27B9500781F57 /* Main.storyboard */,
+				6C2110412FF27B9600781F57 /* Assets.xcassets */,
+				6C2110432FF27B9600781F57 /* Info.plist */,
+				6C2110322FF27B9500781F57 /* Resources */,
+			);
+			path = ReLaTeX;
+			sourceTree = "<group>";
+		};
+		6C2110322FF27B9500781F57 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6C2110332FF27B9500781F57 /* Main.html */,
+				6C2110362FF27B9500781F57 /* Icon.png */,
+				6C2110382FF27B9500781F57 /* Style.css */,
+				6C21103A2FF27B9500781F57 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6C21104C2FF27B9600781F57 /* ReLaTeX Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6C2110592FF27B9600781F57 /* Resources */,
+				6C21104D2FF27B9600781F57 /* SafariWebExtensionHandler.swift */,
+				6C21104F2FF27B9600781F57 /* Info.plist */,
+			);
+			path = "ReLaTeX Extension";
+			sourceTree = "<group>";
+		};
+		6C2110592FF27B9600781F57 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6C21105A2FF27B9600781F57 /* content.css */,
+				6C21105B2FF27B9600781F57 /* icons */,
+				6C21105C2FF27B9600781F57 /* manifest.json */,
+				6C21105D2FF27B9600781F57 /* content.js */,
+				6C21105E2FF27B9600781F57 /* vendor */,
+			);
+			name = Resources;
+			path = "ReLaTeX Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C21102C2FF27B9500781F57 /* ReLaTeX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C2110562FF27B9600781F57 /* Build configuration list for PBXNativeTarget "ReLaTeX" */;
+			buildPhases = (
+				6C2110292FF27B9500781F57 /* Sources */,
+				6C21102A2FF27B9500781F57 /* Frameworks */,
+				6C21102B2FF27B9500781F57 /* Resources */,
+				6C2110552FF27B9600781F57 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C21104B2FF27B9600781F57 /* PBXTargetDependency */,
+			);
+			name = ReLaTeX;
+			packageProductDependencies = (
+			);
+			productName = ReLaTeX;
+			productReference = 6C21102D2FF27B9500781F57 /* ReLaTeX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6C2110472FF27B9600781F57 /* ReLaTeX Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C2110522FF27B9600781F57 /* Build configuration list for PBXNativeTarget "ReLaTeX Extension" */;
+			buildPhases = (
+				6C2110442FF27B9600781F57 /* Sources */,
+				6C2110452FF27B9600781F57 /* Frameworks */,
+				6C2110462FF27B9600781F57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ReLaTeX Extension";
+			packageProductDependencies = (
+			);
+			productName = "ReLaTeX Extension";
+			productReference = 6C2110482FF27B9600781F57 /* ReLaTeX Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C2110252FF27B9500781F57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					6C21102C2FF27B9500781F57 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					6C2110472FF27B9600781F57 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = 6C2110282FF27B9500781F57 /* Build configuration list for PBXProject "ReLaTeX" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C2110242FF27B9500781F57;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6C21102E2FF27B9500781F57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C21102C2FF27B9500781F57 /* ReLaTeX */,
+				6C2110472FF27B9600781F57 /* ReLaTeX Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C21102B2FF27B9500781F57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C2110372FF27B9500781F57 /* Icon.png in Resources */,
+				6C2110402FF27B9500781F57 /* Main.storyboard in Resources */,
+				6C21103B2FF27B9500781F57 /* Script.js in Resources */,
+				6C2110352FF27B9500781F57 /* Main.html in Resources */,
+				6C2110422FF27B9600781F57 /* Assets.xcassets in Resources */,
+				6C2110392FF27B9500781F57 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C2110462FF27B9600781F57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C2110632FF27B9600781F57 /* vendor in Resources */,
+				6C2110622FF27B9600781F57 /* content.js in Resources */,
+				6C21105F2FF27B9600781F57 /* content.css in Resources */,
+				6C2110612FF27B9600781F57 /* manifest.json in Resources */,
+				6C2110602FF27B9600781F57 /* icons in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C2110292FF27B9500781F57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C21103D2FF27B9500781F57 /* ViewController.swift in Sources */,
+				6C2110312FF27B9500781F57 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C2110442FF27B9600781F57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C21104E2FF27B9600781F57 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C21104B2FF27B9600781F57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C2110472FF27B9600781F57 /* ReLaTeX Extension */;
+			targetProxy = 6C21104A2FF27B9600781F57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6C2110332FF27B9500781F57 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C2110342FF27B9500781F57 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		6C21103E2FF27B9500781F57 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C21103F2FF27B9500781F57 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C2110502FF27B9600781F57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6C2110512FF27B9600781F57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		6C2110532FF27B9600781F57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ReLaTeX Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ReLaTeX Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aurxs.ReLaTeX.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6C2110542FF27B9600781F57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ReLaTeX Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ReLaTeX Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aurxs.ReLaTeX.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6C2110572FF27B9600781F57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReLaTeX/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ReLaTeX;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aurxs.ReLaTeX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6C2110582FF27B9600781F57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReLaTeX/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ReLaTeX;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aurxs.ReLaTeX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C2110282FF27B9500781F57 /* Build configuration list for PBXProject "ReLaTeX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C2110502FF27B9600781F57 /* Debug */,
+				6C2110512FF27B9600781F57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C2110522FF27B9600781F57 /* Build configuration list for PBXNativeTarget "ReLaTeX Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C2110532FF27B9600781F57 /* Debug */,
+				6C2110542FF27B9600781F57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C2110562FF27B9600781F57 /* Build configuration list for PBXNativeTarget "ReLaTeX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C2110572FF27B9600781F57 /* Debug */,
+				6C2110582FF27B9600781F57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C2110252FF27B9500781F57 /* Project object */;
+}
