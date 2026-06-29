@@ -40,7 +40,34 @@ ReLaTeX is a small macOS Safari Web Extension built for one problem: ChatGPT pag
 
 ## Install
 
-ReLaTeX is currently distributed as source. Build and enable it locally:
+Download a prebuilt app from GitHub Actions:
+
+1. Open the repository's **Actions** tab.
+2. Run **Build macOS App** manually, or open the latest successful run.
+3. Download the `ReLaTeX-macOS-Release` artifact.
+4. Unzip the downloaded artifact, then unzip `ReLaTeX-macOS-Release.zip`.
+5. Open `ReLaTeX.app`.
+
+The Actions artifact is unsigned. If macOS blocks the downloaded app, remove the quarantine flag after unzipping `ReLaTeX.app`:
+
+```sh
+xattr -dr com.apple.quarantine ReLaTeX.app
+```
+
+In Safari:
+
+1. Open Safari Settings.
+2. Go to Extensions.
+3. Enable `ReLaTeX for ChatGPT`.
+4. Refresh your ChatGPT page.
+
+Because the app is not Developer ID signed yet, Safari may still require unsigned extensions to be enabled:
+
+1. Safari Settings -> Advanced -> Show features for web developers.
+2. Safari menu bar -> Develop -> Allow Unsigned Extensions.
+3. Open `ReLaTeX.app` again.
+
+Build from source for local development:
 
 ```sh
 git clone https://github.com/Aurxs/ReLaTeX.git
@@ -55,19 +82,6 @@ In Xcode:
 1. Select the `ReLaTeX` scheme.
 2. Choose `My Mac` as the run destination.
 3. Run the app.
-
-In Safari:
-
-1. Open Safari Settings.
-2. Go to Extensions.
-3. Enable `ReLaTeX for ChatGPT`.
-4. Refresh your ChatGPT page.
-
-If Safari does not show the extension during local development, enable unsigned extensions first:
-
-1. Safari Settings -> Advanced -> Show features for web developers.
-2. Safari menu bar -> Develop -> Allow Unsigned Extensions.
-3. Run `ReLaTeX` from Xcode again.
 
 ## Development
 
@@ -95,10 +109,11 @@ Run a local build check:
 xcodebuild \
   -project ReLaTeX/ReLaTeX.xcodeproj \
   -scheme ReLaTeX \
-  -configuration Debug \
+  -configuration Release \
   -destination 'generic/platform=macOS' \
   -derivedDataPath build/DerivedData \
   CODE_SIGNING_ALLOWED=NO \
+  MACOSX_DEPLOYMENT_TARGET=10.14 \
   build
 ```
 

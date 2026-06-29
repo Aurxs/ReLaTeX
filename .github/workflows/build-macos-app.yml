@@ -1,0 +1,72 @@
+name: Build macOS App
+
+on:
+  workflow_dispatch:
+    inputs:
+      configuration:
+        description: Xcode build configuration
+        required: true
+        default: Release
+        type: choice
+        options:
+          - Release
+          - Debug
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build ReLaTeX.app
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh vendored KaTeX assets
+        run: npm run vendor:katex
+
+      - name: Generate Safari Xcode project
+        run: npm run build:safari
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Build unsigned macOS app
+        run: |
+          xcodebuild \
+            -project ReLaTeX/ReLaTeX.xcodeproj \
+            -scheme ReLaTeX \
+            -configuration "${{ inputs.configuration }}" \
+            -destination 'generic/platform=macOS' \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            MACOSX_DEPLOYMENT_TARGET=10.14 \
+            build
+
+      - name: Package app
+        run: |
+          mkdir -p build/artifacts
+          ditto -c -k --keepParent \
+            "build/DerivedData/Build/Products/${{ inputs.configuration }}/ReLaTeX.app" \
+            "build/artifacts/ReLaTeX-macOS-${{ inputs.configuration }}.zip"
+
+      - name: Upload app artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ReLaTeX-macOS-${{ inputs.configuration }}
+          path: build/artifacts/ReLaTeX-macOS-${{ inputs.configuration }}.zip
+          if-no-files-found: error
+          retention-days: 14

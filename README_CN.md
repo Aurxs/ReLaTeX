@@ -40,7 +40,34 @@ ReLaTeX 是一个 macOS Safari Web Extension，用来解决 ChatGPT 页面里 La
 
 ## 安装使用
 
-目前 ReLaTeX 以源码形式发布，需要本地构建后启用：
+从 GitHub Actions 下载预构建 app：
+
+1. 打开仓库的 **Actions** 页面。
+2. 手动运行 **Build macOS App**，或打开最近一次成功运行。
+3. 下载 `ReLaTeX-macOS-Release` artifact。
+4. 先解压下载下来的 artifact，再解压里面的 `ReLaTeX-macOS-Release.zip`。
+5. 打开 `ReLaTeX.app`。
+
+Actions 产物目前没有签名。如果 macOS 阻止打开，解压出 `ReLaTeX.app` 后执行：
+
+```sh
+xattr -dr com.apple.quarantine ReLaTeX.app
+```
+
+在 Safari 中：
+
+1. 打开 Safari 设置。
+2. 进入扩展。
+3. 启用 `ReLaTeX for ChatGPT`。
+4. 刷新 ChatGPT 页面。
+
+因为这个 app 还没有 Developer ID 签名，Safari 可能仍然需要允许未签名扩展：
+
+1. Safari 设置 -> 高级 -> 显示 Web 开发者功能。
+2. Safari 菜单栏 -> 开发 -> 允许未签名扩展。
+3. 再次打开 `ReLaTeX.app`。
+
+本地开发时仍然可以从源码构建：
 
 ```sh
 git clone https://github.com/Aurxs/ReLaTeX.git
@@ -55,19 +82,6 @@ open ReLaTeX/ReLaTeX.xcodeproj
 1. 选择 `ReLaTeX` scheme。
 2. 运行目标选择 `My Mac`。
 3. 点击运行。
-
-在 Safari 中：
-
-1. 打开 Safari 设置。
-2. 进入扩展。
-3. 启用 `ReLaTeX for ChatGPT`。
-4. 刷新 ChatGPT 页面。
-
-如果 Safari 里看不到本地开发扩展，需要先允许未签名扩展：
-
-1. Safari 设置 -> 高级 -> 显示 Web 开发者功能。
-2. Safari 菜单栏 -> 开发 -> 允许未签名扩展。
-3. 回到 Xcode 重新运行 `ReLaTeX`。
 
 ## 开发
 
@@ -95,10 +109,11 @@ npm run build:safari
 xcodebuild \
   -project ReLaTeX/ReLaTeX.xcodeproj \
   -scheme ReLaTeX \
-  -configuration Debug \
+  -configuration Release \
   -destination 'generic/platform=macOS' \
   -derivedDataPath build/DerivedData \
   CODE_SIGNING_ALLOWED=NO \
+  MACOSX_DEPLOYMENT_TARGET=10.14 \
   build
 ```
 
