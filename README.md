@@ -19,14 +19,15 @@
   <a href="#features">Features</a> ·
   <a href="#install">Install</a> ·
   <a href="#development">Development</a> ·
-  <a href="#privacy">Privacy</a>
+  <a href="#privacy">Privacy</a> ·
+  <a href="README_CN.md">简体中文</a>
 </p>
 
 ---
 
 ReLaTeX is a small macOS Safari Web Extension built for one problem: ChatGPT pages sometimes show LaTeX as raw text instead of rendered formulas. ReLaTeX watches ChatGPT messages, detects raw math such as `$...$`, `\(...\)`, `\[...\]`, and common matrix blocks, then renders them locally with KaTeX.
 
-![ReLaTeX demo](docs/assets/demo.svg)
+![ReLaTeX demo](docs/assets/demo.png)
 
 ## Features
 
