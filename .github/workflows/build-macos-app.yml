@@ -36,6 +36,17 @@ jobs:
       - name: Refresh vendored KaTeX assets
         run: npm run vendor:katex
 
+      - name: Build Chrome extension package
+        run: npm run build:chrome
+
+      - name: Upload Chrome extension artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ReLaTeX-Chrome
+          path: build/chrome/ReLaTeX-Chrome.zip
+          if-no-files-found: error
+          retention-days: 14
+
       - name: Generate Safari Xcode project
         run: npm run build:safari
 
@@ -60,6 +71,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ReLaTeX-macOS-${{ inputs.configuration }}
-          path: build/DerivedData/Build/Products/${{ inputs.configuration }}/ReLaTeX.app
+          # Upload through a wildcard so the artifact keeps the ReLaTeX.app
+          # directory instead of exposing its Contents/ directory at zip root.
+          path: build/DerivedData/Build/Products/${{ inputs.configuration }}/*.app
           if-no-files-found: error
           retention-days: 14

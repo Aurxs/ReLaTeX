@@ -2,11 +2,11 @@
   "manifest_version": 3,
   "name": "ReLaTeX for ChatGPT",
   "version": "0.1.0",
-  "description": "Render raw LaTeX formulas on ChatGPT pages in Safari.",
+  "description": "Render raw LaTeX formulas on ChatGPT pages in Safari and Chrome.",
   "icons": {
-    "48": "icons/icon.svg",
-    "96": "icons/icon.svg",
-    "128": "icons/icon.svg"
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
   },
   "content_scripts": [
     {

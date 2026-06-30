@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  ReLaTeX
 //
-//  Created by Aurxs on 2026/6/29.
+//  Created by Aurxs on 2026/6/30.
 //
 
 import Cocoa

@@ -5,13 +5,13 @@
 <h1 align="center">ReLaTeX</h1>
 
 <p align="center">
-  一个专门修复 ChatGPT 页面 LaTeX 显示问题的 Safari 扩展。
+  一个专门修复 ChatGPT 页面 LaTeX 显示问题的 Safari 和 Chrome 扩展。
 </p>
 
 <p align="center">
   <a href="https://github.com/Aurxs/ReLaTeX/releases"><img alt="Release" src="https://img.shields.io/github/v/release/Aurxs/ReLaTeX?include_prereleases&style=flat-square"></a>
   <a href="https://github.com/Aurxs/ReLaTeX/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/Aurxs/ReLaTeX?style=flat-square"></a>
-  <img alt="Platform" src="https://img.shields.io/badge/platform-macOS%20%7C%20Safari-0f172a?style=flat-square">
+  <img alt="Platform" src="https://img.shields.io/badge/platform-Safari%20%7C%20Chrome-0f172a?style=flat-square">
   <img alt="Scope" src="https://img.shields.io/badge/scope-ChatGPT%20only-2563eb?style=flat-square">
 </p>
 
@@ -25,7 +25,7 @@
 
 ---
 
-ReLaTeX 是一个 macOS Safari Web Extension，用来解决 ChatGPT 页面里 LaTeX 公式没有正常渲染、直接显示成原始 `$...$` 文本的问题。它会在 ChatGPT 消息中识别 `$...$`、`\(...\)`、`\[...\]` 和常见矩阵环境，然后用本地打包的 KaTeX 重新渲染出来。
+ReLaTeX 是一个浏览器扩展，用来解决 ChatGPT 页面里 LaTeX 公式没有正常渲染、直接显示成原始 `$...$` 文本的问题。它会在 ChatGPT 消息中识别 `$...$`、`\(...\)`、`\[...\]` 和常见矩阵环境，然后用本地打包的 KaTeX 重新渲染出来。
 
 ![ReLaTeX 演示](docs/assets/demo.png)
 
@@ -39,6 +39,26 @@ ReLaTeX 是一个 macOS Safari Web Extension，用来解决 ChatGPT 页面里 La
 - 自动跳过输入框、按钮、代码块，以及已经渲染过的公式。
 
 ## 安装使用
+
+### Chrome
+
+在 Chrome 中本地使用：
+
+1. 打开 `chrome://extensions`。
+2. 打开开发者模式。
+3. 点击 **加载已解压的扩展程序**。
+4. 选择这个仓库里的 `extension/` 目录。
+5. 刷新 ChatGPT 页面。
+
+如果需要可分发的 Chrome 包：
+
+```sh
+npm run build:chrome
+```
+
+未打包扩展会输出到 `build/chrome/ReLaTeX-Chrome`，zip 包会输出到 `build/chrome/ReLaTeX-Chrome.zip`。
+
+### Safari
 
 从 GitHub Actions 下载预构建 app：
 
@@ -104,6 +124,12 @@ npm run vendor:katex
 npm run build:safari
 ```
 
+生成 Chrome 兼容的未打包扩展和 zip 包：
+
+```sh
+npm run build:chrome
+```
+
 本地构建检查：
 
 ```sh
@@ -124,6 +150,7 @@ xcodebuild \
 extension/                 Web Extension 源码
 extension/content.js       ChatGPT LaTeX 检测和渲染逻辑
 extension/vendor/katex/    本地打包的 KaTeX JS、CSS 和字体
+build/chrome/              生成的 Chrome 扩展包
 ReLaTeX/                   生成的 Safari app 和扩展 Xcode 工程
 scripts/                   资源同步和宿主 app 补丁脚本
 docs/assets/               README 图片资源
@@ -131,7 +158,7 @@ docs/assets/               README 图片资源
 
 ## 隐私
 
-ReLaTeX 只在 Safari 本地运行，只申请访问 ChatGPT 页面。它不会把页面文本、公式内容、账号信息或浏览内容发送到任何第三方服务。
+ReLaTeX 只在浏览器本地运行，只申请访问 ChatGPT 页面。它不会把页面文本、公式内容、账号信息或浏览内容发送到任何第三方服务。
 
 ## 致谢
 
